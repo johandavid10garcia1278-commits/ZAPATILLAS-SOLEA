@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f6f5f1" />
+  <meta name="description" content="Encuentra tus próximas zapatillas favoritas en Solea. Explora marcas, elige tu talla y descubre tu próximo par." />
+  <title>SOLEA — Encuentra tu próximo par</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/solea-logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="announcement"><span class="sparkle">✳</span> Tu próximo par está más cerca. <strong>Envío gratis</strong> en compras superiores a $250.000 <span class="announcement-arrow">↗</span></div>
+
+  <header class="site-header" id="inicio">
+    <a class="brand" href="#inicio" aria-label="Solea, inicio">
+      <img src="assets/solea-logo.svg" alt="" width="38" height="38" />
+      <span>SOLEA<span class="brand-dot">.</span><small>MOVE YOUR WAY</small></span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
+      <a class="nav-link active" href="#tienda">Tienda</a>
+      <a class="nav-link" href="#marcas">Marcas</a>
+      <a class="nav-link" href="#guia-tallas">Guía de tallas</a>
+      <a class="nav-link" href="#nosotros">Nuestra vibra</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button search-toggle" id="searchToggle" aria-label="Abrir búsqueda"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.7"></circle><path d="m16 16 4.5 4.5"></path></svg></button>
+      <button class="icon-button cart-trigger" id="cartOpen" aria-label="Abrir carrito"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 4.5h2l2.1 10.1a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 1.9-1.4l1.5-6.2H6.2"></path><circle cx="10" cy="20" r="1"></circle><circle cx="17.5" cy="20" r="1"></circle></svg><span class="cart-count" id="cartCount">0</span></button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> ESTILO QUE SE MUEVE CONTIGO</div>
+        <h1 id="heroTitle">Tus pasos.<br />Tus <span>reglas.</span></h1>
+        <p>Encuentra ese par que va contigo. Zapatillas para moverte, explorar y hacer de cada día algo tuyo.</p>
+        <div class="hero-buttons"><a class="button button-dark" href="#tienda">Explorar colección <span>↗</span></a><a class="text-link" href="#marcas">Descubrir marcas <span>→</span></a></div>
+        <div class="hero-proof"><div class="avatar-stack"><span>✦</span><span>✳</span><span>＋</span></div><div><strong>Tu estilo, sin límites</strong><small>Encuentra el par que habla de ti</small></div></div>
+        <span class="hero-stamp" aria-hidden="true">FIND<br />YOUR<br /><b>SOLE.</b></span>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image-wrap"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1100&q=85" alt="Zapatilla deportiva roja en primer plano" fetchpriority="high" /></div>
+        <div class="hero-scribble" aria-hidden="true">the next<br />step is yours <span>↘</span></div>
+        <div class="hero-product-tag"><span class="tag-dot"></span><div><small>EL FAVORITO DE LA SEMANA</small><strong>Street Red 01</strong></div><span class="tag-price">$289.900</span></div>
+        <span class="visual-number">01 / 04</span>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Lo que nos mueve"><div class="ticker-track"><span>ENCUENTRA TU FLOW</span><b>✳</b><span>STREET. SPORT. EVERYDAY.</span><b>✳</b><span>CAMINA A TU MANERA</span><b>✳</b><span>ENCUENTRA TU FLOW</span><b>✳</b><span>STREET. SPORT. EVERYDAY.</span><b>✳</b></div></section>
+
+    <section class="shop-section section-pad" id="tienda">
+      <div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> LA SELECCIÓN SOLEA</div><h2>Encuentra tu <span>par.</span></h2></div><p>Clásicos que nunca fallan y novedades que pisan fuerte.</p></div>
+      <div class="shop-layout">
+        <aside class="filters" aria-label="Filtros de productos">
+          <div class="filters-title"><span>FILTRAR POR</span><button id="clearFilters" class="clear-button">Limpiar todo</button></div>
+          <div class="filter-group"><h3>Buscar</h3><label class="search-field"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.7"></circle><path d="m16 16 4.5 4.5"></path></svg><input type="search" id="productSearch" placeholder="Modelo, marca..." aria-label="Buscar zapatillas" /></label></div>
+          <div class="filter-group" id="brandFilters"><h3>Marcas <span>+</span></h3><div class="check-list" id="brandOptions"></div></div>
+          <div class="filter-group"><h3>Tu talla <span>+</span></h3><p class="filter-note">Talla europea (EU)</p><div class="size-grid" id="sizeFilters"><button type="button" data-size="36">36</button><button type="button" data-size="37">37</button><button type="button" data-size="38">38</button><button type="button" data-size="39">39</button><button type="button" data-size="40">40</button><button type="button" data-size="41">41</button><button type="button" data-size="42">42</button><button type="button" data-size="43">43</button><button type="button" data-size="44">44</button></div></div>
+          <div class="filter-group"><h3>Precio</h3><label class="price-label" for="priceRange">Hasta <strong id="priceOutput">$500.000</strong></label><input type="range" id="priceRange" min="100000" max="500000" step="10000" value="500000" /><div class="range-labels"><span>$100 mil</span><span>$500 mil</span></div></div>
+          <div class="filter-promo"><span class="promo-icon">✳</span><strong>Un buen par<br />lo cambia todo.</strong><small>Elige lo que te mueve.</small><a href="#guia-tallas">Encuentra tu talla ↗</a></div>
+        </aside>
+
+        <div class="product-area">
+          <div class="product-toolbar"><p id="resultsCount" aria-live="polite">Mostrando colección</p><label class="sort-control"><span>Ordenar:</span><select id="sortSelect" aria-label="Ordenar productos"><option value="featured">Destacados</option><option value="price-asc">Precio: menor a mayor</option><option value="price-desc">Precio: mayor a menor</option><option value="name">Nombre A-Z</option></select></label></div>
+          <div class="active-filters" id="activeFilters"></div>
+          <div class="product-grid" id="productGrid" aria-live="polite"></div>
+          <div class="empty-state" id="emptyState" hidden><span>✳</span><h3>No encontramos ese par.</h3><p>Prueba otra talla, marca o búsqueda.</p><button class="button button-dark" id="emptyReset">Ver toda la colección</button></div>
+          <div class="load-more-wrap"><button class="button button-outline" id="loadMore">Ver más zapatillas <span>↓</span></button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="brands-section section-pad" id="marcas">
+      <div class="section-heading compact"><div><div class="eyebrow"><span class="eyebrow-line"></span> LAS QUE MARCAN EL PASO</div><h2>Tu marca. <span>Tu mood.</span></h2></div><p>Encuentra tu favorito entre los grandes del juego.</p></div>
+      <div class="brand-grid">
+        <button class="brand-tile brand-nike" data-brand="Nike"><span class="brand-symbol swoosh">✓</span><strong>NIKE</strong><small>Just move.</small><span class="tile-arrow">↗</span></button>
+        <button class="brand-tile brand-adidas" data-brand="Adidas"><span class="brand-symbol adidas-symbol">Ⅲ</span><strong>adidas</strong><small>Impossible is nothing.</small><span class="tile-arrow">↗</span></button>
+        <button class="brand-tile brand-newbalance" data-brand="New Balance"><span class="brand-symbol nb-symbol">NB</span><strong>NEW BALANCE</strong><small>Run your way.</small><span class="tile-arrow">↗</span></button>
+        <button class="brand-tile brand-puma" data-brand="Puma"><span class="brand-symbol puma-symbol">◈</span><strong>PUMA</strong><small>Forever faster.</small><span class="tile-arrow">↗</span></button>
+        <button class="brand-tile brand-converse" data-brand="Converse"><span class="brand-symbol star-symbol">★</span><strong>CONVERSE</strong><small>Made for expression.</small><span class="tile-arrow">↗</span></button>
+      </div>
+    </section>
+
+    <section class="size-guide section-pad" id="guia-tallas">
+      <div class="size-guide-art"><div class="guide-circle"></div><img src="https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=900&q=80" alt="Zapatillas blancas de estilo urbano" loading="lazy" /><span class="guide-sticker">FIT<br />CHECK ✓</span></div>
+      <div class="size-guide-copy"><div class="eyebrow"><span class="eyebrow-line"></span> EL FIT PERFECTO</div><h2>Que te queden<br /><span>como anillo</span><br />al dedo.</h2><p>Un gran look empieza con una gran pisada. Mide tu pie y encuentra tu talla ideal antes de elegir tu próximo par.</p><a class="button button-dark" href="#tienda">Encontrar mi talla <span>↗</span></a><div class="size-tip"><span class="tip-icon">i</span><p><strong>Tip Solea:</strong> mide ambos pies al final del día y elige la medida del más largo. Las tallas pueden variar según la marca.</p></div></div>
+    </section>
+
+    <section class="values-section section-pad" id="nosotros"><div class="values-top"><div class="eyebrow"><span class="eyebrow-line"></span> NO ES SOLO CAMINAR</div><h2>Un par. Mil <span>posibilidades.</span></h2><p>Tu camino no viene con instrucciones. Elige tus zapatillas y hazlo a tu manera.</p></div><div class="values-grid"><article class="value-card value-lime"><span class="value-num">01 / DAILY</span><div class="value-graphic graphic-sun">✳</div><h3>Todos los días,<br />a tu manera.</h3><p>Comodidad y estilo para todo lo que tengas en mente.</p><span class="value-mark">↗</span></article><article class="value-card value-dark"><span class="value-num">02 / YOUR FIT</span><div class="value-graphic graphic-type">STEP<br /><i>OUT.</i></div><h3>El fit que<br />va contigo.</h3><p>Busca tu talla, descubre tu silueta y sigue tu propio ritmo.</p><span class="value-mark">↗</span></article><article class="value-card value-peach"><span class="value-num">03 / GOOD ENERGY</span><div class="value-graphic graphic-flower">✺</div><h3>Buena vibra<br />en cada paso.</h3><p>Un look que te representa empieza desde abajo.</p><span class="value-mark">↗</span></article></div></section>
+
+    <section class="newsletter-section"><div class="newsletter-deco">✳</div><div class="newsletter-content"><div class="eyebrow"><span class="eyebrow-line"></span> CARTAS DESDE SOLEA</div><h2>Buenas cosas<br />están <span>en camino.</span></h2><p>Novedades, lanzamientos y un poquito de inspiración en tu correo.</p><form id="newsletterForm" class="newsletter-form"><label class="visually-hidden" for="emailInput">Tu correo electrónico</label><input type="email" id="emailInput" placeholder="Tu correo electrónico" required /><button type="submit" aria-label="Suscribirme">Me apunto <span>↗</span></button></form><small id="newsletterMessage">Sin spam. Solo buena energía, prometido.</small></div><div class="newsletter-sideword">GOOD<br />THINGS<br /><span>MOVE.</span></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-main"><a class="brand footer-brand" href="#inicio"><img src="assets/solea-logo.svg" alt="" width="38" height="38" /><span>SOLEA<span class="brand-dot">.</span><small>MOVE YOUR WAY</small></span></a><p>Camina a tu manera.<br />El resto es tu historia.</p><div class="footer-links"><div><strong>EXPLORA</strong><a href="#tienda">Tienda</a><a href="#marcas">Marcas</a><a href="#guia-tallas">Guía de tallas</a></div><div><strong>SOLEA</strong><a href="#nosotros">Nuestra vibra</a><a href="mailto:hola@solea.example">Contacto demo</a><a href="#inicio">Volver arriba ↑</a></div></div><div class="footer-social"><span>SÍGUENOS EN EL CAMINO</span><div><a href="#tienda" aria-label="Instagram, demostración">ig ↗</a><a href="#tienda" aria-label="TikTok, demostración">tk ↗</a></div></div></div><div class="footer-bottom"><span>© <span id="currentYear"></span> SOLEA. HECHO PARA MOVERSE.</span><span>UNA TIENDA DEMO · SIN PAGOS REALES</span><a href="#inicio">VOLVER AL INICIO ↑</a></div></footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras" aria-hidden="true"><div class="drawer-header"><div><span class="eyebrow">TU SELECCIÓN</span><h2>Tu carrito <span id="drawerItemCount">(0)</span></h2></div><button class="icon-button" id="cartClose" aria-label="Cerrar carrito">×</button></div><div class="cart-items" id="cartItems"></div><div class="cart-empty" id="cartEmpty"><span>✳</span><h3>Tu próximo par te espera.</h3><p>Aún no has agregado nada. Encuentra uno que vaya contigo.</p><button class="button button-dark" id="continueShopping">Explorar zapatillas</button></div><div class="cart-bottom" id="cartBottom"><div class="shipping-progress"><span id="shippingMessage">Te faltan $250.000 para envío gratis</span><div class="progress-track"><span id="shippingProgress"></span></div></div><div class="cart-subtotal"><span>Subtotal</span><strong id="cartSubtotal">$0</strong></div><p class="cart-disclaimer">Envío e impuestos se calculan al confirmar. Esta es una demostración y no procesa pagos.</p><button class="button button-dark checkout-button" id="checkoutButton">Continuar <span>↗</span></button></div></aside>
+
+  <div class="quickview-backdrop" id="quickviewBackdrop"></div><section class="quickview" id="quickview" role="dialog" aria-modal="true" aria-labelledby="quickviewTitle" aria-hidden="true"><button class="icon-button quickview-close" id="quickviewClose" aria-label="Cerrar detalles">×</button><div id="quickviewContent"></div></section>
+
+  <script src="script.js"></script>
+</body>
+</html>
